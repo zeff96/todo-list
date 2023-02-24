@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/zeff96/todo-list/issues"
   },
-  "homepage": "https://github.com/zeff96/todo-list#readme",
+  "homepage": "https://zeff96.github.io/todo-list",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
@@ -39,6 +40,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.3.0"
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "gh-pages": "^5.0.0"
   }
 }

@@ -93,7 +93,7 @@ body {
 
 .checkbox:checked + .text-node {
   text-decoration: line-through;
-} 
+}
 
 .menu-container {
   position: absolute;

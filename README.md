@@ -25,7 +25,7 @@ Basic website that allows users to add/remove chores and actvities from a list.
 
 ## Live Demo:
 
-[Live Demo Link]()
+[Live Demo Link](https://zeff96.github.io/todo-list/)
 
  ## Built With
 
