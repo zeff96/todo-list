@@ -26,6 +26,13 @@ body {
   position: relative;
 }
 
+.fa-rotate {
+  position: absolute;
+  right: 2%;
+  color: gray;
+  cursor: pointer;
+}
+
 .input-holder {
   position: relative;
 }
@@ -38,6 +45,42 @@ body {
   height: 100%;
 }
 
+.new-text {
+  width: 100%;
+  border: none;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.updatebtn {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.add-todo {
+  position: absolute;
+  padding: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+
+.fa-arrow-turn-down {
+  color: gray;
+  transform: rotate(90deg);
+  font-size: 1rem;
+}
+
 .list-item {
   list-style: none;
   display: flex;
@@ -48,22 +91,42 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.img {
+.checkbox:checked + .text-node {
+  text-decoration: line-through;
+}
+
+.menu-container {
   position: absolute;
-  width: 0.8rem;
   top: 50%;
   transform: translateY(-50%);
   right: 2%;
+  border: none;
   cursor: pointer;
+  font-size: 2rem;
+  color: rgb(109, 107, 107);
+  background-color: #fff;
 }
 
-.image {
-  height: 20px;
+.icon-container {
+  display: none;
   position: absolute;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  right: 1%;
+}
+
+.icon-container.active {
+  display: flex;
+}
+
+.editbtn,
+.deletebtn {
+  background-color: #fff;
+  color: gray;
+  font-size: 1.6rem;
   cursor: pointer;
+  padding: 0.5rem;
+  border: none;
 }
 
 .btn {
@@ -73,4 +136,5 @@ body {
   background-color: lightgrey;
   text-align: center;
   padding: 1rem 0;
+  cursor: pointer;
 }
