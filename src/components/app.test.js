@@ -14,5 +14,18 @@ describe('add and remove group', () => {
       completed: false,
     });
   });
+
+  it('delete a task', () => {
+    const todoList = new Node();
+    todoList.createItems('Write code');
+    todoList.createItems('Write code');
+    todoList.deleteItems(1);
+    expect(todoList.lists).toHaveLength(1);
+    expect(todoList.lists[0]).toEqual({
+      index: 2,
+      description: 'Write code',
+      completed: false,
+    })
+  });
   
 });
