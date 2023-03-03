@@ -95,7 +95,9 @@ export class Node {
   };
 
   toggleCompleted = () => {
-    this.lists.forEach((list) => list.completed = true);
+    this.lists.forEach((list) => {
+      list.completed = true;
+    });
   };
 
   clearCompleted = () => {
