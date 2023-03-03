@@ -23,10 +23,6 @@
 # Todo-List
 Basic website that allows users to add/remove chores and actvities from a list. 
 
-## Live Demo:
-
-[Live Demo Link](https://zeff96.github.io/todo-list/)
-
  ## Built With
 
 - HTML(HTML-5).
@@ -51,6 +47,11 @@ Basic website that allows users to add/remove chores and actvities from a list.
 - use Local storage to save user data.
 - User can add books and can remoove it from the list.
 
+## Live Demo:
+
+[Live Demo Link](https://zeff96.github.io/todo-list/)
+
+
 ## Getting Started
 
 ### Setup
@@ -58,8 +59,6 @@ Basic website that allows users to add/remove chores and actvities from a list.
 ```sh
     git@github.com:zeff96/todo-list.git
 ```
-### Install 
-2- Install npm (node pakage manager)
 
 ### Prerequisites:
 **you can run any one of these commands to install npm on your machine:**
@@ -71,9 +70,23 @@ Basic website that allows users to add/remove chores and actvities from a list.
 - npm i -g
 - sudo apt install -g npm
 
+### Install 
+2- Install npm (node pakage manager)
+
+### Usage
+  ```sh
+    use git bash to open in Vs code;
+  ```  
+
 ### Run tests
 
 We use Linters for HTML/CSS to cheack this project.
+
+## Deployment 
+
+  ```sh
+    - github pages
+  ```
 
 ## Authors
 

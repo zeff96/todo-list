@@ -8,6 +8,10 @@ body {
   background-color: lightgray;
 }
 
+.gray {
+  color: gray;
+}
+
 .sections {
   width: 60%;
   background-color: #fff;
@@ -29,7 +33,6 @@ body {
 .fa-rotate {
   position: absolute;
   right: 2%;
-  color: gray;
   cursor: pointer;
 }
 
@@ -43,25 +46,7 @@ body {
   border: 1px solid lightgray;
   width: 100%;
   height: 100%;
-}
-
-.new-text {
-  width: 100%;
-  border: none;
-  padding: 0.3rem;
-  position: relative;
-}
-
-.updatebtn {
-  position: absolute;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: none;
-  font-size: 1rem;
-  color: gray;
-  cursor: pointer;
+  outline: none;
 }
 
 .add-todo {
@@ -76,14 +61,14 @@ body {
 }
 
 .fa-arrow-turn-down {
-  color: gray;
   transform: rotate(90deg);
   font-size: 1rem;
 }
 
-.list-item {
+.list {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 0.5rem;
   border: 1px solid lightgray;
   width: 100%;
@@ -91,42 +76,24 @@ body {
   padding: 1rem 0.5rem;
 }
 
+.text-node {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
 .checkbox:checked + .text-node {
   text-decoration: line-through;
 }
 
-.menu-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2%;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  color: rgb(109, 107, 107);
-  background-color: #fff;
-}
-
-.icon-container {
-  display: none;
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.icon-container.active {
-  display: flex;
-}
-
-.editbtn,
 .deletebtn {
   background-color: #fff;
-  color: gray;
-  font-size: 1.6rem;
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem;
   border: none;
+  position: absolute;
+  right: 2%;
 }
 
 .btn {
