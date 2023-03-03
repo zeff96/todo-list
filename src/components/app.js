@@ -54,7 +54,7 @@ export class Node {
         if (check.checked) {
           this.lists = this.lists.map((list) => {
             if (list.index === Number(check.parentNode.id)) {
-              list.completed = true;
+              list.completed = check.checked;
             }
             return list;
           });
@@ -91,6 +91,12 @@ export class Node {
     this.lists.forEach((list) => {
       list.index = initialIndex;
       initialIndex += 1;
+    });
+  };
+
+  toggleCompleted = () => {
+    this.lists.forEach((list) => {
+      list.completed = true;
     });
   };
 
