@@ -80,13 +80,13 @@ Basic website that allows users to add/remove chores and actvities from a list.
 
 ### Run tests
 
+We use Linters for HTML/CSS to cheack this project.
+
 ## Deployment 
 
   ```sh
     - github pages
   ```
-
-We use Linters for HTML/CSS to cheack this project.
 
 ## Authors
 
