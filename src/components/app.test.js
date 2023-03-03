@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { Node } from "./app";
+import { Node } from './app.js';
 
 describe('add and remove group', () => {
   it('should add a task to the list', () => {
@@ -25,7 +25,6 @@ describe('add and remove group', () => {
       index: 2,
       description: 'Write code',
       completed: false,
-    })
+    });
   });
-  
 });

@@ -4,26 +4,26 @@ export class Node {
   }
 
   createItems = (description) => {
-   const completed = false;
-   const index = this.lists.length + 1;
-   const list = {
-    completed,
-    index,
-    description
-   }
-   this.lists.push(list);
+    const completed = false;
+    const index = this.lists.length + 1;
+    const list = {
+      completed,
+      index,
+      description,
+    };
+    this.lists.push(list);
   };
 
   deleteItems = (index) => {
     this.lists.forEach((list) => {
       if (list.index === index) {
         this.lists.splice(this.lists.indexOf(list), 1);
-      };
+      }
     });
   };
 
   render=(list) => {
-    list.innerHTML = ''
+    list.innerHTML = '';
     this.lists.forEach((todo) => {
       const li = `<div id="${todo.index}" class="list">
         <input 
@@ -44,7 +44,7 @@ export class Node {
           class="deletebtn"
           >del
         </button>  
-      </div>`
+      </div>`;
       list.innerHTML += li;
     });
     const checkbox = document.querySelectorAll('.checkbox');
@@ -53,33 +53,33 @@ export class Node {
       check.addEventListener('change', () => {
         if (check.checked) {
           this.lists = this.lists.map((list) => {
-            if (list.index === Number(check.parentNode.id)){
+            if (list.index === Number(check.parentNode.id)) {
               list.completed = true;
             }
             return list;
           });
           this.saveItems();
-        }else {
+        } else {
           this.lists = this.lists.map((list) => {
-            if (list.index === Number(check.parentNode.id)){
+            if (list.index === Number(check.parentNode.id)) {
               list.completed = false;
             }
             return list;
           });
           this.saveItems();
-        };
+        }
       });
     });
 
     const texts = document.querySelectorAll('.text-node');
-  
+
     texts.forEach((text) => {
       text.addEventListener('change', () => {
         this.lists.forEach((list) => {
           if (list.index === Number(text.id)) {
             list.description = text.value;
             this.saveItems();
-          };
+          }
         });
       });
     });
@@ -104,10 +104,10 @@ export class Node {
   };
 
   savedItems = () => {
-    if(localStorage.getItem('data')){
+    if (localStorage.getItem('data')) {
       this.lists = JSON.parse(localStorage.getItem('data'));
     }
   };
-};
+}
 
 export default Node;

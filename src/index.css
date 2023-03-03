@@ -76,14 +76,14 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.checkbox:checked + .text-node {
-  text-decoration: line-through;
-}
-
 .text-node {
   border: none;
   outline: none;
   width: 90%;
+}
+
+.checkbox:checked + .text-node {
+  text-decoration: line-through;
 }
 
 .deletebtn {
