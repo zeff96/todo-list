@@ -28,3 +28,16 @@ describe('add and remove group', () => {
     });
   });
 });
+
+describe('edit and update group', () => {
+  it('edit function', () => {
+    const todoList = new Node();
+    todoList.createItems('Write code');
+    const texts = document.querySelectorAll('.text-node');
+    texts.forEach((text) => {
+      text.value = 'Addeka & Mostafa';
+      text.dispatchEvent(new Event('change'));
+      expect(todoList.lists[0].description).toEqual('Addeka & Mostafa');
+    })
+  })
+});
