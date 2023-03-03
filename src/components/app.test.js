@@ -52,3 +52,17 @@ describe('updating an items completed status', () => {
     });
   });
 });
+
+describe('clear all completed', () => {
+  it('clear all completed items on the list', () => {
+    const todoList = new Node();
+    todoList.createItems('hello');
+    todoList.createItems('hello there');
+    todoList.createItems('hello, how are');
+    todoList.lists[0].completed = true;
+    todoList.lists[2].completed = true;
+    todoList.clearCompleted();
+    expect(todoList.lists.length).toBe(1);
+    expect(todoList.lists[0].description).toBe('hello there');
+  });
+});
