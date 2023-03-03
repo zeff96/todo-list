@@ -38,6 +38,17 @@ describe('edit and update group', () => {
       text.value = 'Addeka & Mostafa';
       text.dispatchEvent(new Event('change'));
       expect(todoList.lists[0].description).toEqual('Addeka & Mostafa');
-    })
-  })
+    });
+  });
+});
+
+describe('updating an items completed status', () => {
+  it('check status completed', () => {
+    const todoList = new Node();
+    todoList.createItems('Write code');
+    todoList.toggleCompleted();
+    todoList.lists.forEach((list) => {
+      expect(list.completed).toBe(true);
+    });
+  });
 });
