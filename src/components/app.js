@@ -3,7 +3,7 @@ export class Node {
     this.lists = [];
   }
 
-  createItems = (description) => {
+  static createItems = (description) => {
     const completed = false;
     const index = this.lists.length + 1;
     const list = {
@@ -14,7 +14,7 @@ export class Node {
     this.lists.push(list);
   };
 
-  deleteItems = (index) => {
+  static deleteItems = (index) => {
     this.lists.forEach((list) => {
       if (list.index === index) {
         this.lists.splice(this.lists.indexOf(list), 1);
@@ -22,8 +22,8 @@ export class Node {
     });
   };
 
-  render=(list) => {
-    list.innerHTML = '';
+  static render = (list) => {
+    list.innerHTML = "";
     this.lists.forEach((todo) => {
       const li = `<div id="${todo.index}" class="list">
         <input 
@@ -47,10 +47,10 @@ export class Node {
       </div>`;
       list.innerHTML += li;
     });
-    const checkbox = document.querySelectorAll('.checkbox');
+    const checkbox = document.querySelectorAll(".checkbox");
 
     checkbox.forEach((check) => {
-      check.addEventListener('change', () => {
+      check.addEventListener("change", () => {
         if (check.checked) {
           this.lists = this.lists.map((list) => {
             if (list.index === Number(check.parentNode.id)) {
@@ -71,10 +71,10 @@ export class Node {
       });
     });
 
-    const texts = document.querySelectorAll('.text-node');
+    const texts = document.querySelectorAll(".text-node");
 
     texts.forEach((text) => {
-      text.addEventListener('change', () => {
+      text.addEventListener("change", () => {
         this.lists.forEach((list) => {
           if (list.index === Number(text.id)) {
             list.description = text.value;
@@ -85,7 +85,7 @@ export class Node {
     });
   };
 
-  resetIndex = () => {
+  static resetIndex = () => {
     let initialIndex = 1;
 
     this.lists.forEach((list) => {
@@ -94,24 +94,24 @@ export class Node {
     });
   };
 
-  toggleCompleted = () => {
+  static toggleCompleted = () => {
     this.lists.forEach((list) => {
       list.completed = true;
     });
   };
 
-  clearCompleted = () => {
+  static clearCompleted = () => {
     this.lists = this.lists.filter((list) => list.completed !== true);
   };
 
-  saveItems = () => {
+  static saveItems = () => {
     const data = JSON.stringify(this.lists);
-    localStorage.setItem('data', data);
+    localStorage.setItem("data", data);
   };
 
-  savedItems = () => {
-    if (localStorage.getItem('data')) {
-      this.lists = JSON.parse(localStorage.getItem('data'));
+  static savedItems = () => {
+    if (localStorage.getItem("data")) {
+      this.lists = JSON.parse(localStorage.getItem("data"));
     }
   };
 }
